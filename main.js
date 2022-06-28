@@ -63,4 +63,13 @@ for(let i = 0; i< legendaryLords.length; i++){
 }
 
 
+const content = document.getElementById('content')
+
+content.innerHTML = ""
+for(let i = 0; i< legendaryLords.length; i++){
+   content.innerHTML += `
+   ${legendaryLords[i].name} ${legendaryLords[i].role} ${legendaryLords[i].profilePic}`;
+}
+
+
 
