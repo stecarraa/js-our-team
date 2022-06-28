@@ -64,12 +64,50 @@ for(let i = 0; i< legendaryLords.length; i++){
 
 
 const content = document.getElementById('content')
+      // content.classList.add("d-flex","flex-wrap")
+
 
 content.innerHTML = ""
 for(let i = 0; i< legendaryLords.length; i++){
-   content.innerHTML += `
-   ${legendaryLords[i].name} ${legendaryLords[i].role} ${legendaryLords[i].profilePic}`;
+    const lordCards = document.createElement("div");
+    lordCards.classList.add("container", );
+
+    const image = `./img/${legendaryLords[i].profilePic}`;
+          
+    lordCards.innerHTML = `
+                           <div class="card mb-3" style="min-width: 250px;max-width:400px">
+                           <div class="row g-0">
+                              <div class="col-md-4">
+                              <img src="${image}" class="img-fluid rounded-start" alt="...">
+                              </div>
+                              <div class="col-md-8">
+                              <div class="card-body">
+                                 <h5 class="card-title">${legendaryLords[i].name}</h5>
+                                 <p class="card-text">${legendaryLords[i].role}</p>
+                                 <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                              </div>
+                              </div>
+                           </div>
+                        </div>`;
+    content.append(lordCards);
+
+   // content.innerHTML += `
+   // ${legendaryLords[i].name} ${legendaryLords[i].role} ${legendaryLords[i].profilePic}`;
 }
 
 
 
+{/* <div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="${image}" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">${legendaryLords[i].name}</h5>
+        <p class="card-text">${legendaryLords[i].role}</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div>
+</div> */}
