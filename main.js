@@ -58,3 +58,9 @@ const legendaryLords =[
      },
 ]
 
+for(let i = 0; i< legendaryLords.length; i++){
+    console.log(`${legendaryLords[i].name} => ${legendaryLords[i].role} => ${legendaryLords[i].profilePic}`)
+}
+
+
+
